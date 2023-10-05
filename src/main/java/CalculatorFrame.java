@@ -42,12 +42,10 @@ public class CalculatorFrame extends JFrame {
 
         mainPanel.add(displayField, BorderLayout.NORTH);
 
-        // Панель с кнопками
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new GridLayout(6, 6));
         mainPanel.add(buttonsPanel, BorderLayout.CENTER);
 
-        // Добавление кнопок на панель
         String[] buttons = {
                 "RAD", "DEG", "M", "MR", "M+", "C",
                 "sqrt", "1/x", "e", "pi", "exp", "/",
@@ -79,7 +77,7 @@ public class CalculatorFrame extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
-            // Здесь можно добавить логику калькулятора, например:
+
             switch (command) {
                 case "C":
                     value = 0;
